@@ -1,0 +1,38 @@
+
+
+
+vec2 downsampled_uv(vec2 coord, float d, vec2 res){
+  /*Maps the current position to a downsampled position
+  
+  Parameters
+  ----------
+  
+  coord : vec2
+      Current pixel position.
+  d : float
+      downsample proportion (image will be d times smaller)
+  */
+
+  // Below line maps the current position to a downsampled uv
+  // mod(fragCoord.x, d) is the distance from the current position from the target
+  // position, so it is just subtracted.
+  return vec2( coord.x - mod(coord.x, d), coord.y - mod(coord.y, d) ) / res.xy; 
+}
+
+
+
+void main(in std::Texture2d tex, in float char_size, out vec4 fragColor) {
+
+  vec2 fragCoord = fragment(std::getFragmentCoord().xy);
+  vec2 iResolution = std::getRenderTargetSize();
+  fragCoord = vec2(fragCoord.x, iResolution.y - fragCoord.y);
+
+  vec2 uv = downsampled_uv(fragCoord, char_size, iResolution);
+
+  vec3 text = tex.sample(uv).rgb;
+
+  fragColor = vec4(text, 1.0);
+
+}
+
+  

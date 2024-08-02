@@ -1,0 +1,121 @@
+{
+  "id": "20f273685c1cc4698b0ccaaf4bb39f243",
+  "revision": "30f273685c1cc4698b0ccaaf4bb39f243",
+  "version": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 181
+  },
+  "creatorIdentifier": "com.facebook.arstudio.skylight",
+  "creatorPlatform": "windows",
+  "creatorFileVersion": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 181
+  },
+  "visual_programming": {
+    "connections": [
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:2069-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "fromPatch": "producer_patch_model:1427-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "fromPort": "0",
+        "toPatch": "shader_code_patch_model:2067-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "toPort": "256"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:2755-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "fromPatch": "shader_code_patch_model:2067-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "fromPort": "16777216",
+        "toPatch": "consumer_patch_model:2753-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "toPort": "1"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:3881-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "fromPatch": "shader_code_patch_model:3723-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "fromPort": "16777216",
+        "toPatch": "consumer_patch_model:3879-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "toPort": "1"
+      },
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:3883-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "fromPatch": "producer_patch_model:1427-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "fromPort": "0",
+        "toPatch": "shader_code_patch_model:3723-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "toPort": "256"
+      }
+    ],
+    "graphs": [
+      {
+        "modelName": "patch_graph",
+        "identifier": "patch_graph:90-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "subpatches": [
+          "consumer_patch_model:2753-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+          "consumer_patch_model:3879-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+          "producer_patch_model:1427-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+          "shader_code_patch_model:2067-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+          "shader_code_patch_model:3723-a8629c7d-f715-4aef-b580-094f4fdb03ef"
+        ]
+      }
+    ],
+    "patches": [
+      {
+        "modelName": "consumer_patch_model",
+        "name": "material0",
+        "identifier": "consumer_patch_model:2753-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "object": "defaultMaterial:2485-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "objectProperty": "diffuse_texture_slot",
+        "position": [
+          1172,
+          92
+        ]
+      },
+      {
+        "modelName": "consumer_patch_model",
+        "name": "material1",
+        "identifier": "consumer_patch_model:3879-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "object": "defaultMaterial:3725-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "objectProperty": "diffuse_texture_slot",
+        "position": [
+          1172,
+          212
+        ]
+      },
+      {
+        "modelName": "producer_patch_model",
+        "name": "cameraTexture0",
+        "identifier": "producer_patch_model:1427-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "object": "cameraTexture:1301-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "position": [
+          332,
+          44
+        ]
+      },
+      {
+        "modelName": "shader_code_patch_model",
+        "name": "shaderCodeAsset - mainImage",
+        "identifier": "shader_code_patch_model:2067-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "object": "shader_code_asset_model:419-0f273685-c1cc-4698-b0cc-aaf4bb39f243",
+        "position": [
+          740,
+          68
+        ],
+        "shaderInterface": "shader_interface_model:1933-0f273685-c1cc-4698-b0cc-aaf4bb39f243"
+      },
+      {
+        "modelName": "shader_code_patch_model",
+        "name": "shaderCodeAsset(1) - mainImage",
+        "identifier": "shader_code_patch_model:3723-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "object": "shader_code_asset_model:683-a8629c7d-f715-4aef-b580-094f4fdb03ef",
+        "position": [
+          788,
+          212
+        ],
+        "shaderInterface": "shader_interface_model:2501-a8629c7d-f715-4aef-b580-094f4fdb03ef"
+      }
+    ]
+  }
+}
