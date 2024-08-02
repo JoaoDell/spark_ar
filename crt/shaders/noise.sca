@@ -1,0 +1,10 @@
+void main(out vec4 fragColor) {
+  vec2 fragCoord = fragment(std::getVertexTexCoord());
+  vec2 iResolution = std::getRenderTargetSize();
+  //fragCoord = vec2(fragCoord.x, iResolution.y - fragCoord.y);
+  float iTime = std::getTime();
+
+  float white_noise = fract(sin(iTime*dot(fragCoord, vec2(78.567,96.116)))*43758.5453123);
+
+  fragColor = vec4(vec3(white_noise), 1.0);
+}

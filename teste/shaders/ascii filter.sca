@@ -1,0 +1,130 @@
+/* 
+ASCII filter. Current version from July 7, 2024.
+Based on the genius implementation by movAX13h and inspired by Acerola's video on ASCII rendering.
+Original ones here: 
+- movAX13h : https://www.shadertoy.com/view/lssGDj
+- Acerola  : https://www.youtube.com/watch?v=gg40RWiaHRY
+
+I plan to try implementing the border detection to render ASCII borders, so expect some update someday.
+
+For more ASCII bitmap generation: https://thrill-project.com/archiv/coding/bitmap/
+
+For this version, I focused on understanding the basic ideas and implementing it 
+in a legible way for me. For this, I have implemented: 
+- A helper grayscale function; 
+- A downsampled uv function to help downsample the coordinates, therefore the image; 
+- The original character function, that now deals more clearly with spacing and modulates 
+some more the original code.
+*/
+
+#define CHAR_SIZE 5.0
+#define SPACING 1.0
+
+float grayscale(vec3 p){
+    /*Convertes a given pixel to grayscale.
+    Parameters
+    ----------
+    
+    p : vec3
+        rgb pixel.
+    */
+    return 0.299*p.r + 0.587*p.g + 0.114*p.b;
+}
+
+int shiftright(int val, int shift){
+  return val/int(pow(2.0, float(shift)));
+}
+
+int shiftleft(int val, int shift){
+  return val*int(pow(2.0, float(shift)));
+}
+
+int bitwise_and(int left, int right){
+  int result = 0;
+  int power = 1;
+  
+  for (int i = 0; i < 32; ++i) {
+      bool bitLeft = mod(float(left / power), 2.0) != 0.0;
+      bool bitRight = mod(float(right / power), 2.0) != 0.0;
+      bool andBit = bitLeft && bitRight;
+      
+      if(andBit) result += power;
+
+      power *= 2;
+  }
+  
+  return result;
+}
+
+
+vec2 downsampled_uv(vec2 coord, float d){
+    /*Maps the current position to a downsampled position
+    
+    Parameters
+    ----------
+    
+    coord : vec2
+        Current pixel position.
+    d : float
+        downsample proportion (image will be d times smaller)
+    */
+
+    // Below line maps the current position to a downsampled uv
+    // mod(fragCoord.x, d) is the distance from the current position from the target
+    // position, so it is just subtracted.
+    return vec2( coord.x - mod(coord.x, d), coord.y - mod(coord.y, d) ) / std::getRenderTargetSize().xy; 
+}
+
+float character(int c, vec2 p){
+    /*Returns if current pixel corresponds to character bounds
+    
+    Parameters
+    ----------
+    
+    c : int
+        character 2^25 (5x5) bitmap value. 
+    p : vec2
+        fragment position.
+    */
+    vec2 local_p = vec2( mod(p.x + 0.5, CHAR_SIZE + 2.0*SPACING), // ALWAYS sum +0.5
+                         mod(p.y + 0.5, CHAR_SIZE + 2.0*SPACING));// ALWAYS sum +0.5
+    
+    //Checks if pixel position is beyond character limits, if yes then returns 0.0
+    if(local_p.x < SPACING || local_p.x > CHAR_SIZE + (SPACING - 1.0)) 
+        return 0.0;
+    if(local_p.y < SPACING || local_p.y > CHAR_SIZE + (SPACING - 1.0))
+        return 0.0;
+    
+    //Starts at bottom-left position
+    int start = 16; //0b0000000000000000000010000
+    int bit_pos = shiftright(start, int(local_p.x - SPACING) ); // x offset
+    bit_pos = shiftleft(bit_pos, int(CHAR_SIZE*(local_p.y - SPACING)) ); // y offset
+    int result = bitwise_and(bit_pos, c); // acts as a mask to filter only the pixel value
+    
+    // bitshifts to the most significant bit so it does not overflow the output
+    return float(shiftright(result, int( CHAR_SIZE-(local_p.x - (SPACING - 1.0)) ) +
+                           int( CHAR_SIZE*(local_p.y - (SPACING)      ) )   ) );
+}
+
+void mainImage( in std::Texture2d tex_asset, out vec4 fragColor )
+{
+    vec2 fragCoord = fragment(floor(std::getRenderTargetSize() * std::getVertexTexCoord()));
+
+    float levels_size = 8.0;
+
+    vec2 uv = downsampled_uv(fragCoord, CHAR_SIZE + 2.0*SPACING);
+
+  /*char levels    =        (  , .  , :     , >       , *      , o        , @        , ▄       )*/
+    int levels[8] = {0, 16, 65600, 4357252, 163153, 15255086, 13195790, 1048544};
+
+    vec3 tex = tex_asset.sample(uv).rgb;
+    float gray = grayscale(tex);
+    
+    float ds = 1.0/levels_size; //levels size
+    
+    int final_value = 0;
+    for(float i = 0.0; i < levels_size; i++) //Runs for every intensity level
+        if(gray > 0.0 + i*ds) final_value = levels[int(i)];
+
+    fragColor = vec4( tex*character(final_value, fragCoord) , 1.0);
+}

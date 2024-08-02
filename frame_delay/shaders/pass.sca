@@ -1,0 +1,13 @@
+void main(in std::Texture2d tex_channel, in std::Texture2d delayed_tex_channel, out vec4 fragColor){
+
+  vec2 fragCoord = fragment(std::getFragmentCoord().xy);
+  vec2 iResolution = std::getRenderTargetSize().xy;
+  fragCoord = vec2(fragCoord.x, iResolution.y - fragCoord.y);
+
+  vec2 uv = fragCoord/iResolution;
+
+  vec3 color = tex_channel.sample(uv).rgb;
+  vec3 delayed_color = delayed_tex_channel.sample(uv).rgb;
+
+  fragColor = vec4((color + delayed_color), 1.0);
+}
