@@ -1,9 +1,9 @@
 {
   "modelName": "document",
   "name": "Effect",
-  "identifier": "document:113880-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-  "id": "113878994149297d294fdf9c5c0ea5c8b1edc5",
-  "revision": "31221fb065355437d4f259fe9422d640d4f64",
+  "identifier": "document:7807-06276988-296d-44b3-9c84-25f2936602ec",
+  "id": "780506276988296d44b39c8425f2936602ec",
+  "revision": "59350906276988296d44b39c8425f2936602ec",
   "version": {
     "dev": 0,
     "patch": 0,
@@ -22,10 +22,10 @@
   "objects": [
     {
       "modelName": "assets_config_model",
-      "identifier": "assets_config_model:114071-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "assets_config_model:7998-06276988-296d-44b3-9c84-25f2936602ec",
       "categoriesOrder": [
-        "materials",
         "patch_assets",
+        "materials",
         "shaders",
         "textures"
       ]
@@ -34,67 +34,82 @@
   "projectFormatType": "separated_files",
   "usingPatchesV2": true,
   "visual_programming": {
-    "sectionFileLocation": "crt.patches"
+    "sectionFileLocation": "crt_v3.patches"
   },
   "children": [
     {
-      "modelName": "textures",
-      "identifier": "textures:113886-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "modelName": "fonts",
+      "identifier": "fonts:7809-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
+        {
+          "modelName": "local_font_model",
+          "name": "Facebook Sans Bold",
+          "identifier": "local_font_model:572464-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetLocator": "572465-06276988-296d-44b3-9c84-25f2936602ec",
+          "fontIdentity": "com.facebook.editor.fonts.facebooksans-bold",
+          "isExternalAsset": false
+        }
+      ]
+    },
+    {
+      "modelName": "textures",
+      "identifier": "textures:7813-06276988-296d-44b3-9c84-25f2936602ec",
+      "children": [
+        {
+          "sectionFileLocation": "textures/White_Noise.texture"
+        },
         {
           "modelName": "cameraTexture",
           "name": "cameraTexture0",
-          "identifier": "cameraTexture:129025-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "sourceSceneObjectIdentifier": "camera:113952-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
-        },
-        {
-          "modelName": "render_pass_texture_model",
-          "name": "Shader Render Pass Texture",
-          "identifier": "render_pass_texture_model:130021-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "isPatchManaged": true,
-          "renderPassPatchV2": "template_patch_model:130019-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "sourceSceneObjectIdentifier": "template_patch_model:130019-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
-        },
-        {
-          "sectionFileLocation": "textures/pixel.texture"
-        },
-        {
-          "sectionFileLocation": "textures/lines.texture"
+          "identifier": "cameraTexture:57495-06276988-296d-44b3-9c84-25f2936602ec",
+          "sourceSceneObjectIdentifier": "camera:7879-06276988-296d-44b3-9c84-25f2936602ec"
         }
       ]
     },
     {
       "modelName": "materials",
-      "identifier": "materials:113888-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "materials:7815-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "sectionFileLocation": "materials/material0-2.material"
+        },
+        {
+          "sectionFileLocation": "materials/material1.material"
         }
       ]
     },
     {
-      "sectionFileLocation": "crt.scene"
+      "sectionFileLocation": "crt_v3.scene"
     },
     {
       "modelName": "layers",
-      "identifier": "layers:113896-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "layers:7823-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "modelName": "layer",
           "name": "layer0",
-          "identifier": "layer:113958-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+          "identifier": "layer:7885-06276988-296d-44b3-9c84-25f2936602ec",
           "color": "0xff8c72ca"
         }
       ]
     },
     {
       "modelName": "patch_assets_model",
-      "identifier": "patch_assets_model:113906-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "patch_assets_model:7833-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "modelName": "patch_data_base_model",
+          "name": "Fit2Screen",
+          "identifier": "patch_data_base_model:45843-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetDataHash": "cbeed99c6481a79e5072fecdcb72f8e4",
+          "assetLocator": "patches/Fit2Screen.arp",
+          "externalSourceLocator": "sparkarstudio://arlibrary/facebook/patch_asset/2627624240862938",
+          "isExternalAsset": true
+        },
+        {
+          "modelName": "patch_data_base_model",
           "name": "Slider",
-          "identifier": "patch_data_base_model:123554-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+          "identifier": "patch_data_base_model:56805-06276988-296d-44b3-9c84-25f2936602ec",
           "assetDataHash": "30beaf6bc6f40c6c5a61f960748c8b5c",
           "assetLocator": "patches/Slider.arp",
           "externalSourceLocator": "sparkarstudio://arlibrary/facebook/patch_asset/580559289784144",
@@ -102,24 +117,33 @@
         },
         {
           "modelName": "patch_data_base_model",
-          "name": "Store Value",
-          "identifier": "patch_data_base_model:52307-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-          "assetDataHash": "8e422303d043742dde881adafc0faa20",
-          "assetLocator": "patches/Store Value.arp",
-          "externalSourceLocator": "sparkarstudio://arlibrary/facebook/patch_asset/674882613833999",
+          "name": "number_to_text_converter",
+          "identifier": "patch_data_base_model:553442-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetDataHash": "bfe215ea9c01c021f7dac4640b54a67f",
+          "assetLocator": "patches/number_to_text_converter.arp",
+          "externalSourceLocator": "sparkarstudio://arlibrary/facebook/patch_asset/433113101036175",
+          "isExternalAsset": true
+        },
+        {
+          "modelName": "patch_data_base_model",
+          "name": "3D_Text_center_paramonovkos",
+          "identifier": "patch_data_base_model:572060-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetDataHash": "af31df7286048b0417b832c4ab5270a1",
+          "assetLocator": "patches/3D_Text_center_paramonovkos.arp",
+          "externalSourceLocator": "sparkarstudio://arlibrary/facebook/patch_asset/412984163368749",
           "isExternalAsset": true
         }
       ]
     },
     {
       "modelName": "shaders",
-      "identifier": "shaders:113910-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "shaders:7837-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "modelName": "shader_code_asset_model",
           "name": "crt",
-          "identifier": "shader_code_asset_model:123876-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "assetDataHash": "cfb617a4a7d127c1335a7aebe415b382",
+          "identifier": "shader_code_asset_model:46515-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetDataHash": "f0b12fd7332dccbcb6d3bfbc43d335f6",
           "assetLocator": "shaders/crt.sca",
           "builtinDeps": [
             "texture2d",
@@ -127,24 +151,35 @@
           ],
           "externalDeps": [],
           "isExternalAsset": true,
-          "moduleName": "sparkShaderCode14062305459452254175",
-          "wordsHash": -6828786150733280149,
+          "moduleName": "sparkShaderCode10458879994548408588",
+          "wordsHash": 1975178339679889097,
           "children": [
             {
               "modelName": "shader_interface_model",
-              "identifier": "shader_interface_model:123878-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+              "identifier": "shader_interface_model:46517-06276988-296d-44b3-9c84-25f2936602ec",
               "description": "",
               "functionName": "user::main",
-              "linkageName": "sparkShaderCode14062305459452254175",
+              "linkageName": "sparkShaderCode10458879994548408588",
               "children": [
                 {
                   "modelName": "shaderInputPorts",
-                  "identifier": "shaderInputPorts:123880-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "shaderInputPorts:46519-06276988-296d-44b3-9c84-25f2936602ec",
                   "children": [
                     {
                       "modelName": "shader_input_port_model",
                       "name": "tex_channel",
-                      "identifier": "shader_input_port_model:25944-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:46671-06276988-296d-44b3-9c84-25f2936602ec",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": "",
+                      "valueType": "texture_2d"
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "tex_noise",
+                      "identifier": "shader_input_port_model:46673-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -155,7 +190,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "MIN_CHAR_SIZE",
-                      "identifier": "shader_input_port_model:25946-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:46675-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -165,7 +200,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "MAX_CHAR_SIZE",
-                      "identifier": "shader_input_port_model:25948-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:46677-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -175,27 +210,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "TOTAL_CHAR_SIZE",
-                      "identifier": "shader_input_port_model:25950-fb065355-437d-4f25-9fe9-422d640d4f64",
-                      "defaultValue": {
-                        "type": 0,
-                        "value": 0
-                      },
-                      "description": ""
-                    },
-                    {
-                      "modelName": "shader_input_port_model",
-                      "name": "MIN_INTENSITY",
-                      "identifier": "shader_input_port_model:25952-fb065355-437d-4f25-9fe9-422d640d4f64",
-                      "defaultValue": {
-                        "type": 0,
-                        "value": 0
-                      },
-                      "description": ""
-                    },
-                    {
-                      "modelName": "shader_input_port_model",
-                      "name": "MAX_INTENSITY",
-                      "identifier": "shader_input_port_model:25954-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:46679-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -205,7 +220,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "SPACING",
-                      "identifier": "shader_input_port_model:25956-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:46681-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -215,17 +230,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "slider",
-                      "identifier": "shader_input_port_model:25958-fb065355-437d-4f25-9fe9-422d640d4f64",
-                      "defaultValue": {
-                        "type": 0,
-                        "value": 0
-                      },
-                      "description": ""
-                    },
-                    {
-                      "modelName": "shader_input_port_model",
-                      "name": "noise_on",
-                      "identifier": "shader_input_port_model:25960-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:46683-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -236,19 +241,19 @@
                 },
                 {
                   "modelName": "shaderOutputPorts",
-                  "identifier": "shaderOutputPorts:123882-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "shaderOutputPorts:46521-06276988-296d-44b3-9c84-25f2936602ec",
                   "children": [
                     {
                       "modelName": "shader_output_port_model",
                       "name": "return",
-                      "identifier": "shader_output_port_model:25962-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_output_port_model:46685-06276988-296d-44b3-9c84-25f2936602ec",
                       "description": "",
                       "valueType": "void_return"
                     },
                     {
                       "modelName": "shader_output_port_model",
                       "name": "fragColor",
-                      "identifier": "shader_output_port_model:25964-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_output_port_model:46687-06276988-296d-44b3-9c84-25f2936602ec",
                       "description": "",
                       "valueType": "vec4"
                     }
@@ -261,7 +266,7 @@
         {
           "modelName": "shader_code_asset_model",
           "name": "downsampler",
-          "identifier": "shader_code_asset_model:128397-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+          "identifier": "shader_code_asset_model:46843-06276988-296d-44b3-9c84-25f2936602ec",
           "assetDataHash": "f98abd1a40ff11e88e99141c8d201e5d",
           "assetLocator": "shaders/downsampler.sca",
           "builtinDeps": [
@@ -270,24 +275,24 @@
           ],
           "externalDeps": [],
           "isExternalAsset": true,
-          "moduleName": "sparkShaderCode15496316259698898152",
-          "wordsHash": 4467028683566507385,
+          "moduleName": "sparkShaderCode2040471138077797204",
+          "wordsHash": -1303572535787625560,
           "children": [
             {
               "modelName": "shader_interface_model",
-              "identifier": "shader_interface_model:128399-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+              "identifier": "shader_interface_model:46845-06276988-296d-44b3-9c84-25f2936602ec",
               "description": "Maps the current position to a downsampled position\nParameters\n----------\ncoord : vec2\nCurrent pixel position.\nd : float\ndownsample proportion (image will be d times smaller)\nBelow line maps the current position to a downsampled uv\nmod(fragCoord.x, d) is the distance from the current position from the target\nposition, so it is just subtracted.\nStripe to account for the slot offset",
               "functionName": "user::main",
-              "linkageName": "sparkShaderCode15496316259698898152",
+              "linkageName": "sparkShaderCode2040471138077797204",
               "children": [
                 {
                   "modelName": "shaderInputPorts",
-                  "identifier": "shaderInputPorts:128401-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "shaderInputPorts:46847-06276988-296d-44b3-9c84-25f2936602ec",
                   "children": [
                     {
                       "modelName": "shader_input_port_model",
                       "name": "tex",
-                      "identifier": "shader_input_port_model:14777-65fd6e03-0175-40c3-9c80-3fb000b172a7",
+                      "identifier": "shader_input_port_model:47029-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -298,7 +303,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "char_size",
-                      "identifier": "shader_input_port_model:14779-65fd6e03-0175-40c3-9c80-3fb000b172a7",
+                      "identifier": "shader_input_port_model:47031-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -309,19 +314,19 @@
                 },
                 {
                   "modelName": "shaderOutputPorts",
-                  "identifier": "shaderOutputPorts:128403-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "shaderOutputPorts:46849-06276988-296d-44b3-9c84-25f2936602ec",
                   "children": [
                     {
                       "modelName": "shader_output_port_model",
                       "name": "return",
-                      "identifier": "shader_output_port_model:14781-65fd6e03-0175-40c3-9c80-3fb000b172a7",
+                      "identifier": "shader_output_port_model:47033-06276988-296d-44b3-9c84-25f2936602ec",
                       "description": "",
                       "valueType": "void_return"
                     },
                     {
                       "modelName": "shader_output_port_model",
                       "name": "fragColor",
-                      "identifier": "shader_output_port_model:14783-65fd6e03-0175-40c3-9c80-3fb000b172a7",
+                      "identifier": "shader_output_port_model:47035-06276988-296d-44b3-9c84-25f2936602ec",
                       "description": "",
                       "valueType": "vec4"
                     }
@@ -334,8 +339,8 @@
         {
           "modelName": "shader_code_asset_model",
           "name": "bloom",
-          "identifier": "shader_code_asset_model:129339-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "assetDataHash": "39e75417fdefde30b90b2cf43abb82f1",
+          "identifier": "shader_code_asset_model:47207-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetDataHash": "3241b870e31ea9b60937f5ed00943cf9",
           "assetLocator": "shaders/bloom.sca",
           "builtinDeps": [
             "texture2d",
@@ -343,24 +348,24 @@
           ],
           "externalDeps": [],
           "isExternalAsset": true,
-          "moduleName": "sparkShaderCode15039389919081784432",
-          "wordsHash": -5276313265889425944,
+          "moduleName": "sparkShaderCode6704131188614578144",
+          "wordsHash": 5081156548451449757,
           "children": [
             {
               "modelName": "shader_interface_model",
-              "identifier": "shader_interface_model:129341-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+              "identifier": "shader_interface_model:47209-06276988-296d-44b3-9c84-25f2936602ec",
               "description": "Convolves a gaussian with a given fragment given a window size.\nParameters\n----------\nuv : vec2\nTexture coordinates.\nsampler : sampler2D\nTexture sampler.\nwindow_size : float\nWindow size, in pixels.",
               "functionName": "user::main",
-              "linkageName": "sparkShaderCode15039389919081784432",
+              "linkageName": "sparkShaderCode6704131188614578144",
               "children": [
                 {
                   "modelName": "shaderInputPorts",
-                  "identifier": "shaderInputPorts:129343-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "shaderInputPorts:47211-06276988-296d-44b3-9c84-25f2936602ec",
                   "children": [
                     {
                       "modelName": "shader_input_port_model",
                       "name": "tex_channel",
-                      "identifier": "shader_input_port_model:25476-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:47409-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -371,17 +376,7 @@
                     {
                       "modelName": "shader_input_port_model",
                       "name": "window_size",
-                      "identifier": "shader_input_port_model:25478-fb065355-437d-4f25-9fe9-422d640d4f64",
-                      "defaultValue": {
-                        "type": 0,
-                        "value": 0
-                      },
-                      "description": ""
-                    },
-                    {
-                      "modelName": "shader_input_port_model",
-                      "name": "bloom_val",
-                      "identifier": "shader_input_port_model:25480-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_input_port_model:47411-06276988-296d-44b3-9c84-25f2936602ec",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -392,87 +387,19 @@
                 },
                 {
                   "modelName": "shaderOutputPorts",
-                  "identifier": "shaderOutputPorts:129345-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "shaderOutputPorts:47213-06276988-296d-44b3-9c84-25f2936602ec",
                   "children": [
                     {
                       "modelName": "shader_output_port_model",
                       "name": "return",
-                      "identifier": "shader_output_port_model:25482-fb065355-437d-4f25-9fe9-422d640d4f64",
+                      "identifier": "shader_output_port_model:47413-06276988-296d-44b3-9c84-25f2936602ec",
                       "description": "",
                       "valueType": "void_return"
                     },
                     {
                       "modelName": "shader_output_port_model",
                       "name": "fragColor",
-                      "identifier": "shader_output_port_model:25484-fb065355-437d-4f25-9fe9-422d640d4f64",
-                      "description": "",
-                      "valueType": "vec4"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "modelName": "shader_code_asset_model",
-          "name": "isNaN",
-          "identifier": "shader_code_asset_model:16489-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-          "assetDataHash": "2cd7e9758e18a95ee4cb941b8b5af0c9",
-          "assetLocator": "shaders/isNaN.sca",
-          "builtinDeps": [
-            "texture2d",
-            "textureEnv"
-          ],
-          "externalDeps": [],
-          "isExternalAsset": true,
-          "moduleName": "sparkShaderCode13667658061919184380",
-          "wordsHash": -2486847765407476612,
-          "children": [
-            {
-              "modelName": "shader_interface_model",
-              "identifier": "shader_interface_model:16491-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-              "description": "",
-              "functionName": "user::main",
-              "linkageName": "sparkShaderCode13667658061919184380",
-              "children": [
-                {
-                  "modelName": "shaderInputPorts",
-                  "identifier": "shaderInputPorts:16493-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-                  "children": [
-                    {
-                      "modelName": "shader_input_port_model",
-                      "name": "value",
-                      "identifier": "shader_input_port_model:16979-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-                      "defaultValue": {
-                        "type": 3,
-                        "value": [
-                          0,
-                          0,
-                          0,
-                          0
-                        ]
-                      },
-                      "description": "",
-                      "valueType": "vec4"
-                    }
-                  ]
-                },
-                {
-                  "modelName": "shaderOutputPorts",
-                  "identifier": "shaderOutputPorts:16495-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-                  "children": [
-                    {
-                      "modelName": "shader_output_port_model",
-                      "name": "return",
-                      "identifier": "shader_output_port_model:16981-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-                      "description": "",
-                      "valueType": "void_return"
-                    },
-                    {
-                      "modelName": "shader_output_port_model",
-                      "name": "fragColor",
-                      "identifier": "shader_output_port_model:16983-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
+                      "identifier": "shader_output_port_model:47415-06276988-296d-44b3-9c84-25f2936602ec",
                       "description": "",
                       "valueType": "vec4"
                     }
@@ -486,61 +413,25 @@
     },
     {
       "modelName": "scripts_model",
-      "identifier": "scripts_model:113912-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "scripts_model:7839-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "modelName": "script_bridging_variables_model",
-          "identifier": "script_bridging_variables_model:113914-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+          "identifier": "script_bridging_variables_model:7841-06276988-296d-44b3-9c84-25f2936602ec"
         }
       ]
     },
     {
       "modelName": "bundled_packages_model",
-      "identifier": "bundled_packages_model:113920-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+      "identifier": "bundled_packages_model:7847-06276988-296d-44b3-9c84-25f2936602ec"
     },
     {
       "modelName": "exportConfig",
-      "identifier": "exportConfig:113924-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-      "children": [
-        {
-          "modelName": "textureExportConfig",
-          "identifier": "textureExportConfig:124782-02472771-02a7-416f-95ef-8609d91b4f33",
-          "method": "fastest",
-          "targetFormat": 1
-        },
-        {
-          "modelName": "textureExportConfig",
-          "identifier": "textureExportConfig:125212-02472771-02a7-416f-95ef-8609d91b4f33",
-          "method": "fastest",
-          "targetFormat": 2
-        },
-        {
-          "modelName": "textureExportConfig",
-          "identifier": "textureExportConfig:125644-02472771-02a7-416f-95ef-8609d91b4f33",
-          "method": "fastest"
-        },
-        {
-          "modelName": "textureExportConfig",
-          "identifier": "textureExportConfig:177012-02472771-02a7-416f-95ef-8609d91b4f33",
-          "method": "fastest",
-          "targetFormat": 1
-        },
-        {
-          "modelName": "textureExportConfig",
-          "identifier": "textureExportConfig:177432-02472771-02a7-416f-95ef-8609d91b4f33",
-          "method": "fastest",
-          "targetFormat": 2
-        },
-        {
-          "modelName": "textureExportConfig",
-          "identifier": "textureExportConfig:177854-02472771-02a7-416f-95ef-8609d91b4f33",
-          "method": "fastest"
-        }
-      ]
+      "identifier": "exportConfig:7851-06276988-296d-44b3-9c84-25f2936602ec"
     },
     {
       "modelName": "manifest",
-      "identifier": "manifest:113926-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "manifest:7853-06276988-296d-44b3-9c84-25f2936602ec",
       "additionalEnabledChanges": null,
       "assistantAppIDs": [
         "2320137961422959"
@@ -552,7 +443,6 @@
       "assistantUseWit": false,
       "audioEnableAudioGraphComponents": false,
       "audioEnableAudioTransformationsApi": false,
-      "bodyTracking3DMinVersion": 181,
       "bodyTrackingMinVersion": 101,
       "cameraControlDefaultCameraFacing": "unspecified",
       "dynamicTextAltitude": false,
@@ -575,6 +465,7 @@
       "effectPbrSheenMaterialExtension": false,
       "effectPbrSpecularMaterialExtension": false,
       "effectPbrTransmissionMaterialExtension": false,
+      "effectRecordingFromMic": false,
       "effectUses3DModelAssets": false,
       "effectUses4KTextures": false,
       "effectUsesAheadOfTimeShaders": false,
@@ -607,7 +498,7 @@
       "effectUsesCameraShare": false,
       "effectUsesComponentEvaluation": true,
       "effectUsesComposedLocally": false,
-      "effectUsesComposedMaterial": true,
+      "effectUsesComposedMaterial": false,
       "effectUsesControllers": false,
       "effectUsesCustomEngineSDK": false,
       "effectUsesCustomFonts": false,
@@ -666,7 +557,7 @@
       "effectUsesFacialGestureRecognition": false,
       "effectUsesFieldOfView": false,
       "effectUsesFingerTracking": false,
-      "effectUsesFonts": false,
+      "effectUsesFonts": true,
       "effectUsesFormFactor": false,
       "effectUsesFrameBrightness": false,
       "effectUsesGalleryPicker": false,
@@ -715,7 +606,7 @@
       "effectUsesNativeUIControl": true,
       "effectUsesNativeUIControlEditableText": false,
       "effectUsesNativeUIControlEditableTextExitCB": false,
-      "effectUsesNativeUIControlPicker": true,
+      "effectUsesNativeUIControlPicker": false,
       "effectUsesNativeUIControlPickerRemoteImages": false,
       "effectUsesNativeUIControlRawTextInput": false,
       "effectUsesNativeUIControlSlider": true,
@@ -724,6 +615,7 @@
       "effectUsesNetworkingScriptAPI": false,
       "effectUsesObjectCapture": false,
       "effectUsesObjectTracking": false,
+      "effectUsesOpticalFlow": false,
       "effectUsesOpusCodec": false,
       "effectUsesOverlayOutput": false,
       "effectUsesPBRMaterial": false,
@@ -760,7 +652,8 @@
       "effectUsesRecognitionTracking": false,
       "effectUsesRecordedSignalsForSamplers": false,
       "effectUsesRemote3DModels": false,
-      "effectUsesRenderPasses": true,
+      "effectUsesRemoteMaps": false,
+      "effectUsesRenderPasses": false,
       "effectUsesRenderSettingsHigh": false,
       "effectUsesRingTryOn": false,
       "effectUsesRotateVector": false,
@@ -774,6 +667,7 @@
       "effectUsesSegmentation": false,
       "effectUsesSegmentationType": false,
       "effectUsesShaderCode": true,
+      "effectUsesShaderPicking": false,
       "effectUsesShadows": false,
       "effectUsesSkinSegmentation": false,
       "effectUsesSkinSmoothing": false,
@@ -786,9 +680,10 @@
       "effectUsesSupportedOrientations": false,
       "effectUsesSvg": false,
       "effectUsesSyncDomApis": false,
+      "effectUsesTargetRecognition": false,
       "effectUsesTextAssets": false,
       "effectUsesTextCaptions": false,
-      "effectUsesTextExtrusion": false,
+      "effectUsesTextExtrusion": true,
       "effectUsesTexturesScriptingModule": false,
       "effectUsesTimeScriptingModule": false,
       "effectUsesToasterTracking": false,
@@ -845,7 +740,7 @@
       "internalScriptingAPIEventStream": false,
       "internalScriptingAPIExperimentalCameraInfo": false,
       "internalScriptingAPIGlobalTransform": false,
-      "manuallyEnabledItemsIds": [],
+      "manuallyEnabledItemsIds": null,
       "maxParticipantsCount": 0,
       "multiclassSegmentationMinVersion": 3004,
       "objectTrackerMaxObjects": 1,
@@ -863,6 +758,7 @@
       "supportsLandscape": false,
       "supportsPortrait": true,
       "supportsWildcardDomainsWhitelisting": false,
+      "targetRecognitionMinVersion": 2,
       "touchGesturesSupportsLongPress": false,
       "touchGesturesSupportsPan": false,
       "touchGesturesSupportsPinch": false,
@@ -879,44 +775,78 @@
     },
     {
       "modelName": "asset_attributions_model",
-      "identifier": "asset_attributions_model:113928-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "asset_attributions_model:7855-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "modelName": "asset_attribution_model",
-          "identifier": "asset_attribution_model:123558-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "assetAuthor": "Keetapol Boonprachak",
-          "assetModelIdentifier": "patch_data_base_model:123554-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
-          "assetTitle": "Slider",
+          "identifier": "asset_attribution_model:45847-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetAuthor": "Josh Beckwith",
+          "assetModelIdentifier": "patch_data_base_model:45843-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetTitle": "Fit2Screen",
           "assetURLString": "",
-          "licenseModelIdentifier": "license_model:123556-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+          "licenseModelIdentifier": "license_model:45845-06276988-296d-44b3-9c84-25f2936602ec"
         },
         {
           "modelName": "asset_attribution_model",
-          "identifier": "asset_attribution_model:52309-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-          "assetAuthor": "Keetapol Boonprachak",
-          "assetModelIdentifier": "patch_data_base_model:52307-5182ac3a-d49f-4061-aef4-a6d87ec1b713",
-          "assetTitle": "Store Value",
+          "identifier": "asset_attribution_model:47609-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetAuthor": "Spark AR Assets",
+          "assetModelIdentifier": "texture:47605-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetTitle": "White Noise",
           "assetURLString": "",
-          "licenseModelIdentifier": "license_model:123556-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+          "licenseModelIdentifier": "license_model:47607-06276988-296d-44b3-9c84-25f2936602ec"
+        },
+        {
+          "modelName": "asset_attribution_model",
+          "identifier": "asset_attribution_model:56807-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetAuthor": "Keetapol Boonprachak",
+          "assetModelIdentifier": "patch_data_base_model:56805-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetTitle": "Slider",
+          "assetURLString": "",
+          "licenseModelIdentifier": "license_model:45845-06276988-296d-44b3-9c84-25f2936602ec"
+        },
+        {
+          "modelName": "asset_attribution_model",
+          "identifier": "asset_attribution_model:553444-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetAuthor": "Paramonov Kostiantyn",
+          "assetModelIdentifier": "patch_data_base_model:553442-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetTitle": "For Game. Number to text converter",
+          "assetURLString": "",
+          "licenseModelIdentifier": "license_model:45845-06276988-296d-44b3-9c84-25f2936602ec"
+        },
+        {
+          "modelName": "asset_attribution_model",
+          "identifier": "asset_attribution_model:572062-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetAuthor": "Paramonov Kostiantyn",
+          "assetModelIdentifier": "patch_data_base_model:572060-06276988-296d-44b3-9c84-25f2936602ec",
+          "assetTitle": "For Game. Center 3D text",
+          "assetURLString": "",
+          "licenseModelIdentifier": "license_model:45845-06276988-296d-44b3-9c84-25f2936602ec"
         }
       ]
     },
     {
       "modelName": "licenses_model",
-      "identifier": "licenses_model:113930-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "licenses_model:7857-06276988-296d-44b3-9c84-25f2936602ec",
       "children": [
         {
           "modelName": "license_model",
           "name": "Meta Spark and Frame Studio Terms",
-          "identifier": "license_model:123556-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+          "identifier": "license_model:45845-06276988-296d-44b3-9c84-25f2936602ec",
           "linkURLString": "https://www.facebook.com/legal/camera_effects_platform_terms",
           "slug": "Meta Spark and Frame Studio Terms"
+        },
+        {
+          "modelName": "license_model",
+          "name": "Creative Commons Attribution 4.0",
+          "identifier": "license_model:47607-06276988-296d-44b3-9c84-25f2936602ec",
+          "linkURLString": "https://creativecommons.org/licenses/by/4.0/",
+          "slug": "CC BY 4.0"
         }
       ]
     },
     {
       "modelName": "target",
-      "identifier": "target:113936-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "target:7863-06276988-296d-44b3-9c84-25f2936602ec",
       "targetPlatforms": [
         "instagram",
         "facebook"
@@ -927,20 +857,20 @@
     },
     {
       "modelName": "scripting_config_model",
-      "identifier": "scripting_config_model:113944-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "scripting_config_model:7871-06276988-296d-44b3-9c84-25f2936602ec",
       "forceStrictModeCompilation": true
     },
     {
       "modelName": "graphicsConfig",
-      "identifier": "graphicsConfig:113964-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+      "identifier": "graphicsConfig:7891-06276988-296d-44b3-9c84-25f2936602ec"
     },
     {
       "modelName": "videos_model",
-      "identifier": "videos_model:114061-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+      "identifier": "videos_model:7988-06276988-296d-44b3-9c84-25f2936602ec"
     },
     {
       "modelName": "input_mappings_model",
-      "identifier": "input_mappings_model:114065-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5"
+      "identifier": "input_mappings_model:7992-06276988-296d-44b3-9c84-25f2936602ec"
     }
   ]
 }

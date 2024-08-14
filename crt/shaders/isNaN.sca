@@ -1,0 +1,6 @@
+void main(in vec4 value, out vec4 fragColor){
+  if(value.r != value.r || value.g != value.g || value.b != value.b || value.w != value.w)
+    fragColor = vec4(1.0, 0.0, 0.0, 1.0);
+  else
+    fragColor = value;
+}

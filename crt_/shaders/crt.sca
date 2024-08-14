@@ -1,0 +1,134 @@
+#define PI 3.14159265358979
+
+float grayscale(vec3 p){
+    /*Convertes a given pixel to grayscale.
+    Parameters
+    ----------
+    
+    p : vec3
+        rgb pixel.
+    */
+    return 0.299*p.r + 0.587*p.g + 0.114*p.b;
+}
+
+vec2 downsampled_uv(vec2 coord, float d, vec2 res){
+    /*Maps the current position to a downsampled position
+    
+    Parameters
+    ----------
+    
+    coord : vec2
+        Current pixel position.
+    d : float
+        downsample proportion (image will be d times smaller)
+    */
+
+    // Below line maps the current position to a downsampled uv
+    // mod(fragCoord.x, d) is the distance from the current position from the target
+    // position, so it is just subtracted.
+    float stripe = 0.0 + 1.0*float(sin( PI/(d)*coord.x) > 0.0); // Stripe to account for the slot offset
+    return vec2( coord.x - mod(coord.x, d), coord.y - mod(coord.y + d/2.0*float(stripe == 0.0), d) ) / res.xy; 
+}
+
+float color_channel(float color, vec2 p, vec2 res, float char_size, float spacing){
+    /*Returns if current pixel corresponds to character bounds
+    
+    Parameters
+    ----------
+    
+    color : float
+        color channel. accepted values are 0.0 (red), 1.0 (green) or 2.0 (blue)
+    p : vec2
+        fragment position.
+    */
+    float char_s = char_size*3.0;
+    float total_char_s = char_s + 2.0*spacing;
+    p += 0.5;
+    // p =  floor(p);
+    
+    float stripe = 0.0 + 1.0*float(sin( PI/(total_char_s)*p.x) > 0.0);
+
+    vec2 local_p = vec2( mod(p.x                                  , total_char_s), // ALWAYS sum +0.5
+                         mod(p.y + char_s/2.0*float(stripe == 0.0), total_char_s));// ALWAYS sum +0.5
+                         
+
+    //Checks if pixel position is beyond character limits, if yes then returns 0.0
+    if(local_p.x < spacing || local_p.x > char_s + (spacing - 1.0)) 
+        return 0.0;
+    if(local_p.y < spacing || local_p.y > char_s + (spacing - 1.0))
+        return 0.0;
+
+    //Starts at bottom-left position
+    vec2 real_p = vec2(0.0);
+    real_p += local_p - spacing;
+
+    //checks if pixel is inside the area of the chosen color channel
+    if(real_p.x >= (color)*(char_s/3.0) && 
+       real_p.x <  (color + 1.0)*(char_s/3.0)   )
+       return 1.0;
+    else return 0.0;
+}
+
+vec3 contrast(vec3 color, float x0, float intensity, float k){
+    float gray = (color.r + color.g + color.b)/3.0;
+    float f = intensity/(1.0 + exp(-1.0*k*(gray - x0)));
+    return f*color;
+
+}
+
+float window_f(vec2 coord, vec2 center, float window_size, vec2 res){
+
+    vec2 xy = coord - center;
+    float gamma = res.y/res.x;
+    
+    return 0.0 + 1.0*float(gamma*xy.y > -window_size/2.0 && 
+                           gamma*xy.y <= window_size/2.0);
+}
+
+float threshold(float val, float threshold){
+    return 0.0 + 1.0*float(val >= threshold);
+}
+
+void main(in std::Texture2d tex_channel, 
+          in std::Texture2d tex_noise, 
+          in float MIN_CHAR_SIZE, 
+          in float MAX_CHAR_SIZE,
+          in float TOTAL_CHAR_SIZE, 
+          in float SPACING, 
+          in float slider,  
+          out vec4 fragColor)
+{
+    vec2 fragCoord = fragment(std::getFragmentCoord().xy);
+    vec2 iResolution = std::getRenderTargetSize();
+    fragCoord = vec2(fragCoord.x, iResolution.y - fragCoord.y);
+    float local_char_size = floor( MIN_CHAR_SIZE + slider*MAX_CHAR_SIZE ); //without the spacing and multiply by 3.0
+    float iTime = std::getTime();
+
+    vec2 uv = downsampled_uv(fragCoord.xy, TOTAL_CHAR_SIZE, iResolution);
+    
+    //chroma shift
+    float stepx = 1.0/iResolution.x;
+    float pix_shift = 3.0;
+    vec3 tex = vec3(tex_channel.sample(uv + vec2(pix_shift*stepx, 0.0)).r, tex_channel.sample(uv + vec2(-pix_shift*stepx, 0.0)).g, tex_channel.sample(uv).b);
+    
+    //channel segmentation
+    vec3 color = vec3(tex.r*color_channel(0.0, fragCoord.xy, iResolution, local_char_size, SPACING),
+                      tex.g*color_channel(1.0, fragCoord.xy, iResolution, local_char_size, SPACING),
+                      tex.b*color_channel(2.0, fragCoord.xy, iResolution, local_char_size, SPACING));
+
+    //noise
+    float noise = tex_noise.sample(uv).r;
+    
+    //bands
+    float band_speed = 0.3;
+    float band_size = 300.0;
+    float cycle = iTime;
+    float band = window_f(uv, vec2(mod(band_speed*cycle, 1.0)), band_size/iResolution.y, iResolution);
+    band += window_f(uv, vec2(mod(band_speed*cycle - 0.2, 1.0)), band_size/iResolution.y, iResolution);
+  
+    //final output
+    float final_noise = threshold(fract(noise*iTime), 0.94);
+    fragColor = vec4(contrast(color + 0.15*final_noise*band*float(color != vec3(0.0)), 0.5, 4.0, 2.0), 1.0);
+
+
+}

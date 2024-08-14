@@ -1,6 +1,6 @@
 {
   "modelName": "scene",
-  "identifier": "scene:113894-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+  "identifier": "scene:18-148082f6-be75-43b6-82fc-513a4d2394aa",
   "animationMask": {
     "position": false,
     "rotation": false,
@@ -26,7 +26,7 @@
     {
       "modelName": "device",
       "name": "Device",
-      "identifier": "device:113950-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+      "identifier": "device:74-148082f6-be75-43b6-82fc-513a4d2394aa",
       "animationMask": {
         "position": false,
         "rotation": false,
@@ -53,7 +53,7 @@
         {
           "modelName": "camera",
           "name": "Camera",
-          "identifier": "camera:113952-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+          "identifier": "camera:76-148082f6-be75-43b6-82fc-513a4d2394aa",
           "animationMask": {
             "position": false,
             "rotation": false,
@@ -82,7 +82,7 @@
             {
               "modelName": "focalDistance",
               "name": "Focal Distance",
-              "identifier": "focalDistance:113954-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+              "identifier": "focalDistance:78-148082f6-be75-43b6-82fc-513a4d2394aa",
               "animationMask": {
                 "position": false,
                 "rotation": false,
@@ -109,7 +109,7 @@
                 {
                   "modelName": "ambient_light_source_model",
                   "name": "ambientLight0",
-                  "identifier": "ambient_light_source_model:113960-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "ambient_light_source_model:84-148082f6-be75-43b6-82fc-513a4d2394aa",
                   "animationMask": {
                     "position": false,
                     "rotation": false,
@@ -138,7 +138,7 @@
                 {
                   "modelName": "directional_light_source_model",
                   "name": "directionalLight0",
-                  "identifier": "directional_light_source_model:113962-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "directional_light_source_model:86-148082f6-be75-43b6-82fc-513a4d2394aa",
                   "animationMask": {
                     "position": false,
                     "rotation": false,
@@ -175,14 +175,14 @@
                 {
                   "modelName": "composition_model",
                   "name": "canvas0",
-                  "identifier": "composition_model:114179-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                  "identifier": "composition_model:303-148082f6-be75-43b6-82fc-513a4d2394aa",
                   "animationMask": {
                     "position": false,
                     "rotation": false,
                     "scale": false
                   },
                   "cameraVisibility": "back|front",
-                  "height": 347,
+                  "height": 844,
                   "hidden": false,
                   "layerIdentifier": "layer0",
                   "outputVisibility": "preview|capture",
@@ -194,19 +194,19 @@
                     "rx": 0,
                     "ry": 0,
                     "rz": 0,
-                    "sx": 0.0014409222640097141,
-                    "sy": 0.0014409222640097141,
-                    "sz": 0.0014409222640097141,
+                    "sx": 0.0005924170836806297,
+                    "sy": 0.0005924170836806297,
+                    "sz": 0.0005924170836806297,
                     "x": 0,
                     "y": 0,
                     "z": 0
                   },
-                  "width": 369,
+                  "width": 390,
                   "children": [
                     {
                       "modelName": "rectangle_model",
                       "name": "rectangle0",
-                      "identifier": "rectangle_model:114177-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "identifier": "rectangle_model:301-148082f6-be75-43b6-82fc-513a4d2394aa",
                       "animationMask": {
                         "position": false,
                         "rotation": false,
@@ -227,7 +227,7 @@
                       "isMaterialIdentifierEnabled": true,
                       "layerIdentifier": "layer0",
                       "locksAspectRatio": false,
-                      "materialIdentifier": "defaultMaterial:18470-5f38da27-77e5-439e-b10b-2789070876ee",
+                      "materialIdentifier": "defaultMaterial:683-148082f6-be75-43b6-82fc-513a4d2394aa",
                       "outputVisibility": "preview|capture",
                       "physicsEnabled": false,
                       "pinnedBottom": false,
@@ -325,7 +325,7 @@
         {
           "modelName": "microphone_model",
           "name": "Microphone",
-          "identifier": "microphone_model:113956-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+          "identifier": "microphone_model:80-148082f6-be75-43b6-82fc-513a4d2394aa",
           "animationMask": {
             "position": false,
             "rotation": false,

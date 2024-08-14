@@ -182,7 +182,7 @@
                     "scale": false
                   },
                   "cameraVisibility": "back|front",
-                  "height": 347,
+                  "height": 844,
                   "hidden": false,
                   "layerIdentifier": "layer0",
                   "outputVisibility": "preview|capture",
@@ -194,14 +194,14 @@
                     "rx": 0,
                     "ry": 0,
                     "rz": 0,
-                    "sx": 0.0014409222640097141,
-                    "sy": 0.0014409222640097141,
-                    "sz": 0.0014409222640097141,
+                    "sx": 0.0005924170836806297,
+                    "sy": 0.0005924170836806297,
+                    "sz": 0.0005924170836806297,
                     "x": 0,
                     "y": 0,
                     "z": 0
                   },
-                  "width": 369,
+                  "width": 390,
                   "children": [
                     {
                       "modelName": "rectangle_model",
@@ -227,7 +227,7 @@
                       "isMaterialIdentifierEnabled": true,
                       "layerIdentifier": "layer0",
                       "locksAspectRatio": false,
-                      "materialIdentifier": "defaultMaterial:18470-5f38da27-77e5-439e-b10b-2789070876ee",
+                      "materialIdentifier": "defaultMaterial:114295-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
                       "outputVisibility": "preview|capture",
                       "physicsEnabled": false,
                       "pinnedBottom": false,

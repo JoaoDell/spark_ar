@@ -4,8 +4,6 @@ This shader implements a CRT screen visualizer. It involves a two step renderiza
 noising and renderization band addition.
 2. Image: A final blooming effect is added*/
 
-precision mediump float;
-
 float sigma_from_window(float window_size, float sig_depth){
   //1.0*sigma ~ 68%
   //2.0*sigma ~ 95%
@@ -15,7 +13,7 @@ float sigma_from_window(float window_size, float sig_depth){
   return window_size/(2.0*sig_depth);
 }
 
-float gaussian(vec2 coord, vec2 center, float sigma, vec2 iResolution){
+float gaussian(vec2 coord, vec2 center, float sigma){
   /*Returns the gaussian function value in a given position.
   
   Parameters
@@ -27,6 +25,8 @@ float gaussian(vec2 coord, vec2 center, float sigma, vec2 iResolution){
       Gaussian center.
   sigma : float
       The standard deviation of the gaussian.*/
+
+  vec2 iResolution = std::getRenderTargetSize();
 
   vec2 xy = coord - center;
   float gamma = iResolution.y/iResolution.x;
@@ -40,7 +40,7 @@ bool check_luminosity(vec3 color, float lum_val){
   return color.r >= lum_val || color.g >= lum_val || color.b >= lum_val;
 }
 
-vec3 convolve_gaussian(vec2 uv, std::Texture2d sampler, float window_size, float lum_val, vec2 iResolution){
+vec3 convolve_gaussian(vec2 uv, std::Texture2d sampler, float window_size){
   /*Convolves a gaussian with a given fragment given a window size.
   
   Parameters
@@ -53,6 +53,8 @@ vec3 convolve_gaussian(vec2 uv, std::Texture2d sampler, float window_size, float
   window_size : float
       Window size, in pixels.*/
 
+  vec2 iResolution = std::getRenderTargetSize();
+
   float win_r = floor(window_size/2.0);
   
   float stepx = 1.0/iResolution.x;
@@ -63,6 +65,7 @@ vec3 convolve_gaussian(vec2 uv, std::Texture2d sampler, float window_size, float
   vec3 color = sampler.sample(uv).rgb;
 
   vec2 offset = vec2(0.0);
+  float lum_val = 1.0;
   float n_lums = 1.0;
   vec3 add_color = vec3(0.0);
 
@@ -74,7 +77,8 @@ vec3 convolve_gaussian(vec2 uv, std::Texture2d sampler, float window_size, float
 
       if(check_luminosity(tex, lum_val) == true){
         n_lums += 1.0;
-        add_color += gaussian(uv + offset, uv, sigma, iResolution)*tex;
+        add_color += gaussian(uv + offset, uv, sigma)*tex;
+        
       }
     }
   }
@@ -85,7 +89,6 @@ vec3 convolve_gaussian(vec2 uv, std::Texture2d sampler, float window_size, float
  
 void main( in std::Texture2d tex_channel, 
            in float window_size,
-           in float bloom_val,
            out vec4 fragColor){
 
   vec2 fragCoord = fragment(std::getFragmentCoord().xy);
@@ -95,8 +98,9 @@ void main( in std::Texture2d tex_channel,
   vec2 uv = fragCoord.xy/iResolution.xy;
   
   // bloom
-  vec3 result = convolve_gaussian(uv, tex_channel, window_size, bloom_val, iResolution);
+  float bloom_val = 1.0;
+  vec3 result = convolve_gaussian(uv, tex_channel, window_size);
   
-  fragColor = vec4(clamp(result, 0.0, 1.0), 1.0);
+  fragColor = vec4(result, 1.0);
      
 }

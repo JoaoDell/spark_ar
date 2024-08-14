@@ -182,7 +182,7 @@
                     "scale": false
                   },
                   "cameraVisibility": "back|front",
-                  "height": 844,
+                  "height": 772,
                   "hidden": false,
                   "layerIdentifier": "layer0",
                   "outputVisibility": "preview|capture",
@@ -194,14 +194,14 @@
                     "rx": 0,
                     "ry": 0,
                     "rz": 0,
-                    "sx": 0.0005924170836806297,
-                    "sy": 0.0005924170836806297,
-                    "sz": 0.0005924170836806297,
+                    "sx": 0.0006476683774963021,
+                    "sy": 0.0006476683774963021,
+                    "sz": 0.0006476683774963021,
                     "x": 0,
                     "y": 0,
                     "z": 0
                   },
-                  "width": 390,
+                  "width": 360,
                   "children": [
                     {
                       "modelName": "rectangle_model",

@@ -1,9 +1,9 @@
 {
   "modelName": "document",
   "name": "Effect",
-  "identifier": "document:16954-7c859ea9-1994-4820-b8cd-0f5325114e5f",
-  "id": "169527c859ea919944820b8cd0f5325114e5f",
-  "revision": "7205749739c0f4c4440581e87cdaa5add34c",
+  "identifier": "document:4-148082f6-be75-43b6-82fc-513a4d2394aa",
+  "id": "2148082f6be7543b682fc513a4d2394aa",
+  "revision": "111566994149297d294fdf9c5c0ea5c8b1edc5",
   "version": {
     "dev": 0,
     "patch": 0,
@@ -22,106 +22,108 @@
   "objects": [
     {
       "modelName": "assets_config_model",
-      "identifier": "assets_config_model:17145-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "assets_config_model:195-148082f6-be75-43b6-82fc-513a4d2394aa",
       "categoriesOrder": [
         "materials",
+        "shaders",
         "textures",
-        "shaders"
+        "patch_assets"
       ]
     }
   ],
   "projectFormatType": "separated_files",
   "usingPatchesV2": true,
   "visual_programming": {
-    "sectionFileLocation": "frame_delay.patches"
+    "sectionFileLocation": "crt.patches"
   },
   "children": [
     {
       "modelName": "textures",
-      "identifier": "textures:16960-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "textures:10-148082f6-be75-43b6-82fc-513a4d2394aa",
       "children": [
         {
           "modelName": "cameraTexture",
           "name": "cameraTexture0",
-          "identifier": "cameraTexture:17831-7c859ea9-1994-4820-b8cd-0f5325114e5f",
-          "sourceSceneObjectIdentifier": "camera:17026-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+          "identifier": "cameraTexture:1930-148082f6-be75-43b6-82fc-513a4d2394aa",
+          "sourceSceneObjectIdentifier": "camera:76-148082f6-be75-43b6-82fc-513a4d2394aa"
         },
         {
           "modelName": "render_pass_texture_model",
           "name": "Shader Render Pass Texture",
-          "identifier": "render_pass_texture_model:61628-8c309cb7-a847-4541-b033-ff26652cec85",
+          "identifier": "render_pass_texture_model:645-7c859ea9-1994-4820-b8cd-0f5325114e5f",
           "isPatchManaged": true,
-          "renderPassPatchV2": "template_patch_model:61626-8c309cb7-a847-4541-b033-ff26652cec85",
-          "sourceSceneObjectIdentifier": "template_patch_model:61626-8c309cb7-a847-4541-b033-ff26652cec85"
+          "renderPassPatchV2": "template_patch_model:643-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+          "sourceSceneObjectIdentifier": "template_patch_model:643-7c859ea9-1994-4820-b8cd-0f5325114e5f"
         },
         {
-          "modelName": "render_pass_texture_model",
-          "name": "Delay Frame Texture",
-          "identifier": "render_pass_texture_model:61766-8c309cb7-a847-4541-b033-ff26652cec85",
-          "isPatchManaged": true,
-          "renderPassPatchV2": "template_patch_model:61764-8c309cb7-a847-4541-b033-ff26652cec85",
-          "sourceSceneObjectIdentifier": "template_patch_model:61764-8c309cb7-a847-4541-b033-ff26652cec85"
+          "sectionFileLocation": "textures/White_Noise.texture"
         }
       ]
     },
     {
       "modelName": "materials",
-      "identifier": "materials:16962-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "materials:12-148082f6-be75-43b6-82fc-513a4d2394aa",
       "children": [
         {
           "sectionFileLocation": "materials/material0.material"
+        },
+        {
+          "sectionFileLocation": "materials/material1-2.material"
+        },
+        {
+          "sectionFileLocation": "materials/material2-2.material"
         }
       ]
     },
     {
-      "sectionFileLocation": "frame_delay.scene"
+      "sectionFileLocation": "crt.scene"
     },
     {
       "modelName": "layers",
-      "identifier": "layers:16970-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "layers:20-148082f6-be75-43b6-82fc-513a4d2394aa",
       "children": [
         {
           "modelName": "layer",
           "name": "layer0",
-          "identifier": "layer:17032-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+          "identifier": "layer:82-148082f6-be75-43b6-82fc-513a4d2394aa",
           "color": "0xff8c72ca"
         }
       ]
     },
     {
       "modelName": "shaders",
-      "identifier": "shaders:16984-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "shaders:34-148082f6-be75-43b6-82fc-513a4d2394aa",
       "children": [
         {
           "modelName": "shader_code_asset_model",
-          "name": "pass",
-          "identifier": "shader_code_asset_model:18343-7c859ea9-1994-4820-b8cd-0f5325114e5f",
-          "assetDataHash": "e2f2c56d5edd6dba8092e9d2e19e09f2",
-          "assetLocator": "shaders/pass.sca",
+          "name": "crt",
+          "identifier": "shader_code_asset_model:419-148082f6-be75-43b6-82fc-513a4d2394aa",
+          "assetDataHash": "aeb56e43df1c0dce95ad462c2bde1d05",
+          "assetLocator": "shaders/crt.sca",
           "builtinDeps": [
             "texture2d",
             "textureEnv"
           ],
           "externalDeps": [],
           "isExternalAsset": true,
-          "moduleName": "sparkShaderCode5571381226189888702",
-          "wordsHash": -3980308228894235358,
+          "moduleName": "sparkShaderCode15167739389667463085",
+          "wordsHash": 4398738624310198509,
           "children": [
             {
               "modelName": "shader_interface_model",
-              "identifier": "shader_interface_model:18345-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+              "identifier": "shader_interface_model:421-148082f6-be75-43b6-82fc-513a4d2394aa",
               "description": "",
               "functionName": "user::main",
-              "linkageName": "sparkShaderCode5571381226189888702",
+              "linkageName": "sparkShaderCode15167739389667463085",
               "children": [
                 {
                   "modelName": "shaderInputPorts",
-                  "identifier": "shaderInputPorts:18347-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+                  "identifier": "shaderInputPorts:423-148082f6-be75-43b6-82fc-513a4d2394aa",
                   "children": [
                     {
                       "modelName": "shader_input_port_model",
                       "name": "tex_channel",
-                      "identifier": "shader_input_port_model:20555-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+                      "identifier": "shader_input_port_model:90694-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -131,8 +133,121 @@
                     },
                     {
                       "modelName": "shader_input_port_model",
-                      "name": "delayed_tex_channel",
-                      "identifier": "shader_input_port_model:20557-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+                      "name": "tex_noise",
+                      "identifier": "shader_input_port_model:90696-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": "",
+                      "valueType": "texture_2d"
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "MIN_CHAR_SIZE",
+                      "identifier": "shader_input_port_model:90698-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": ""
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "MAX_CHAR_SIZE",
+                      "identifier": "shader_input_port_model:90700-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": ""
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "TOTAL_CHAR_SIZE",
+                      "identifier": "shader_input_port_model:90702-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": ""
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "SPACING",
+                      "identifier": "shader_input_port_model:90704-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": ""
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "slider",
+                      "identifier": "shader_input_port_model:90706-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": ""
+                    }
+                  ]
+                },
+                {
+                  "modelName": "shaderOutputPorts",
+                  "identifier": "shaderOutputPorts:425-148082f6-be75-43b6-82fc-513a4d2394aa",
+                  "children": [
+                    {
+                      "modelName": "shader_output_port_model",
+                      "name": "return",
+                      "identifier": "shader_output_port_model:90708-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "description": "",
+                      "valueType": "void_return"
+                    },
+                    {
+                      "modelName": "shader_output_port_model",
+                      "name": "fragColor",
+                      "identifier": "shader_output_port_model:90710-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "description": "",
+                      "valueType": "vec4"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelName": "shader_code_asset_model",
+          "name": "bloom",
+          "identifier": "shader_code_asset_model:3540-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+          "assetDataHash": "e7b0f4a1a55e0bb1cbce9ee7dec95aa1",
+          "assetLocator": "shaders/bloom.sca",
+          "builtinDeps": [
+            "texture2d",
+            "textureEnv"
+          ],
+          "externalDeps": [],
+          "isExternalAsset": true,
+          "moduleName": "sparkShaderCode8841123676031692993",
+          "wordsHash": -1172532105245463397,
+          "children": [
+            {
+              "modelName": "shader_interface_model",
+              "identifier": "shader_interface_model:24686-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+              "description": "Convolves a gaussian with a given fragment given a window size.\nParameters\n----------\nuv : vec2\nTexture coordinates.\nsampler : sampler2D\nTexture sampler.\nwindow_size : float\nWindow size, in pixels.",
+              "functionName": "user::main",
+              "linkageName": "sparkShaderCode8841123676031692993",
+              "children": [
+                {
+                  "modelName": "shaderInputPorts",
+                  "identifier": "shaderInputPorts:24688-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+                  "children": [
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "tex_channel",
+                      "identifier": "shader_input_port_model:89540-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
                       "defaultValue": {
                         "type": 0,
                         "value": 0
@@ -144,19 +259,92 @@
                 },
                 {
                   "modelName": "shaderOutputPorts",
-                  "identifier": "shaderOutputPorts:18349-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+                  "identifier": "shaderOutputPorts:24690-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
                   "children": [
                     {
                       "modelName": "shader_output_port_model",
                       "name": "return",
-                      "identifier": "shader_output_port_model:20559-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+                      "identifier": "shader_output_port_model:89542-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
                       "description": "",
                       "valueType": "void_return"
                     },
                     {
                       "modelName": "shader_output_port_model",
                       "name": "fragColor",
-                      "identifier": "shader_output_port_model:20561-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+                      "identifier": "shader_output_port_model:89544-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "description": "",
+                      "valueType": "vec4"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modelName": "shader_code_asset_model",
+          "name": "downsampler",
+          "identifier": "shader_code_asset_model:12054-275d0346-aa0f-4fa9-a908-caae1ed03ee4",
+          "assetDataHash": "e5ccb40a1ba3a63c5679df796288c93b",
+          "assetLocator": "shaders/downsampler.sca",
+          "builtinDeps": [
+            "texture2d",
+            "textureEnv"
+          ],
+          "externalDeps": [],
+          "isExternalAsset": true,
+          "moduleName": "sparkShaderCode17535931495886679673",
+          "wordsHash": -8244200187272732330,
+          "children": [
+            {
+              "modelName": "shader_interface_model",
+              "identifier": "shader_interface_model:12056-275d0346-aa0f-4fa9-a908-caae1ed03ee4",
+              "description": "Maps the current position to a downsampled position\nParameters\n----------\ncoord : vec2\nCurrent pixel position.\nd : float\ndownsample proportion (image will be d times smaller)\nBelow line maps the current position to a downsampled uv\nmod(fragCoord.x, d) is the distance from the current position from the target\nposition, so it is just subtracted.\nStripe to account for the slot offset",
+              "functionName": "user::main",
+              "linkageName": "sparkShaderCode17535931495886679673",
+              "children": [
+                {
+                  "modelName": "shaderInputPorts",
+                  "identifier": "shaderInputPorts:12058-275d0346-aa0f-4fa9-a908-caae1ed03ee4",
+                  "children": [
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "tex",
+                      "identifier": "shader_input_port_model:89920-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": "",
+                      "valueType": "texture_2d"
+                    },
+                    {
+                      "modelName": "shader_input_port_model",
+                      "name": "char_size",
+                      "identifier": "shader_input_port_model:89922-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "defaultValue": {
+                        "type": 0,
+                        "value": 0
+                      },
+                      "description": ""
+                    }
+                  ]
+                },
+                {
+                  "modelName": "shaderOutputPorts",
+                  "identifier": "shaderOutputPorts:12060-275d0346-aa0f-4fa9-a908-caae1ed03ee4",
+                  "children": [
+                    {
+                      "modelName": "shader_output_port_model",
+                      "name": "return",
+                      "identifier": "shader_output_port_model:89924-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
+                      "description": "",
+                      "valueType": "void_return"
+                    },
+                    {
+                      "modelName": "shader_output_port_model",
+                      "name": "fragColor",
+                      "identifier": "shader_output_port_model:89926-99414929-7d29-4fdf-9c5c-0ea5c8b1edc5",
                       "description": "",
                       "valueType": "vec4"
                     }
@@ -170,25 +358,25 @@
     },
     {
       "modelName": "scripts_model",
-      "identifier": "scripts_model:16986-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "scripts_model:36-148082f6-be75-43b6-82fc-513a4d2394aa",
       "children": [
         {
           "modelName": "script_bridging_variables_model",
-          "identifier": "script_bridging_variables_model:16988-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+          "identifier": "script_bridging_variables_model:38-148082f6-be75-43b6-82fc-513a4d2394aa"
         }
       ]
     },
     {
       "modelName": "bundled_packages_model",
-      "identifier": "bundled_packages_model:16994-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+      "identifier": "bundled_packages_model:44-148082f6-be75-43b6-82fc-513a4d2394aa"
     },
     {
       "modelName": "exportConfig",
-      "identifier": "exportConfig:16998-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+      "identifier": "exportConfig:48-148082f6-be75-43b6-82fc-513a4d2394aa"
     },
     {
       "modelName": "manifest",
-      "identifier": "manifest:17000-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "manifest:50-148082f6-be75-43b6-82fc-513a4d2394aa",
       "additionalEnabledChanges": null,
       "assistantAppIDs": [
         "2320137961422959"
@@ -324,7 +512,7 @@
       "effectUsesGltfPbrShader": false,
       "effectUsesGraphQL": false,
       "effectUsesHairSegmentation": false,
-      "effectUsesHalfFloatRenderPass": false,
+      "effectUsesHalfFloatRenderPass": true,
       "effectUsesHandGestureKeypoints": false,
       "effectUsesHandTracker": false,
       "effectUsesHapticFeedback": false,
@@ -360,13 +548,13 @@
       "effectUsesMultiplayer": false,
       "effectUsesMultipleRenderTargets": false,
       "effectUsesMusic": false,
-      "effectUsesNativeUIControl": false,
+      "effectUsesNativeUIControl": true,
       "effectUsesNativeUIControlEditableText": false,
       "effectUsesNativeUIControlEditableTextExitCB": false,
       "effectUsesNativeUIControlPicker": false,
       "effectUsesNativeUIControlPickerRemoteImages": false,
       "effectUsesNativeUIControlRawTextInput": false,
-      "effectUsesNativeUIControlSlider": false,
+      "effectUsesNativeUIControlSlider": true,
       "effectUsesNativeUIControlSliderTypeColor": false,
       "effectUsesNetworking": false,
       "effectUsesNetworkingScriptAPI": false,
@@ -532,11 +720,9 @@
     },
     {
       "modelName": "target",
-      "identifier": "target:17010-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "target:60-148082f6-be75-43b6-82fc-513a4d2394aa",
       "targetPlatforms": [
-        "instagram",
-        "instagram_post_capture",
-        "facebook"
+        "instagram"
       ],
       "targetUseCases": [
         "STORIES"
@@ -544,20 +730,79 @@
     },
     {
       "modelName": "scripting_config_model",
-      "identifier": "scripting_config_model:17018-7c859ea9-1994-4820-b8cd-0f5325114e5f",
+      "identifier": "scripting_config_model:68-148082f6-be75-43b6-82fc-513a4d2394aa",
       "forceStrictModeCompilation": true
     },
     {
       "modelName": "graphicsConfig",
-      "identifier": "graphicsConfig:17038-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+      "identifier": "graphicsConfig:88-148082f6-be75-43b6-82fc-513a4d2394aa"
     },
     {
       "modelName": "videos_model",
-      "identifier": "videos_model:17135-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+      "identifier": "videos_model:185-148082f6-be75-43b6-82fc-513a4d2394aa"
     },
     {
       "modelName": "input_mappings_model",
-      "identifier": "input_mappings_model:17139-7c859ea9-1994-4820-b8cd-0f5325114e5f"
+      "identifier": "input_mappings_model:189-148082f6-be75-43b6-82fc-513a4d2394aa"
+    },
+    {
+      "modelName": "patch_assets_model",
+      "identifier": "patch_assets_model:90-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+      "children": [
+        {
+          "modelName": "patch_data_base_model",
+          "name": "Slider",
+          "identifier": "patch_data_base_model:17853-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+          "assetDataHash": "8d1a3d26023ee08ffe55e1948212c4e9",
+          "assetLocator": "patches/Slider.arp",
+          "externalSourceLocator": "sparkarstudio://arlibrary/facebook/patch_asset/580559289784144",
+          "isExternalAsset": true
+        }
+      ]
+    },
+    {
+      "modelName": "asset_attributions_model",
+      "identifier": "asset_attributions_model:100-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+      "children": [
+        {
+          "modelName": "asset_attribution_model",
+          "identifier": "asset_attribution_model:17857-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+          "assetAuthor": "Keetapol Boonprachak",
+          "assetModelIdentifier": "patch_data_base_model:17853-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+          "assetTitle": "Slider",
+          "assetURLString": "",
+          "licenseModelIdentifier": "license_model:17855-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70"
+        },
+        {
+          "modelName": "asset_attribution_model",
+          "identifier": "asset_attribution_model:39470-c713a47b-d0cf-4d25-9de1-3db34d720771",
+          "assetAuthor": "Spark AR Assets",
+          "assetModelIdentifier": "texture:39466-c713a47b-d0cf-4d25-9de1-3db34d720771",
+          "assetTitle": "White Noise",
+          "assetURLString": "",
+          "licenseModelIdentifier": "license_model:39468-c713a47b-d0cf-4d25-9de1-3db34d720771"
+        }
+      ]
+    },
+    {
+      "modelName": "licenses_model",
+      "identifier": "licenses_model:102-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+      "children": [
+        {
+          "modelName": "license_model",
+          "name": "Meta Spark and Frame Studio Terms",
+          "identifier": "license_model:17855-b3da8b90-c0a0-419b-bfbb-2c8d301ffc70",
+          "linkURLString": "https://www.facebook.com/legal/camera_effects_platform_terms",
+          "slug": "Meta Spark and Frame Studio Terms"
+        },
+        {
+          "modelName": "license_model",
+          "name": "Creative Commons Attribution 4.0",
+          "identifier": "license_model:39468-c713a47b-d0cf-4d25-9de1-3db34d720771",
+          "linkURLString": "https://creativecommons.org/licenses/by/4.0/",
+          "slug": "CC BY 4.0"
+        }
+      ]
     }
   ]
 }

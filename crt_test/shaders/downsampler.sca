@@ -19,6 +19,8 @@ vec2 downsampled_uv(vec2 coord, float d, vec2 res){
   return vec2( coord.x - mod(coord.x, d), coord.y - mod(coord.y + d/2.0*float(stripe == 0.0), d) ) / res.xy; 
 }
 
+
+
 void main(in std::Texture2d tex, 
           in float char_size, 
           out vec4 fragColor) {
